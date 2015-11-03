@@ -66,7 +66,7 @@ widget.on('signin ready', function() {
       var credentials = anonymator.createCredentials();
 
       widget.getClient().signup({
-        scope: 'openid profile',
+        scope: 'openid name email picture',
         connection: 'anonymous',
         username: credentials.username,
         password: credentials.password
@@ -77,7 +77,7 @@ widget.on('signin ready', function() {
 
 function login() {
   widget.show({
-    scope: 'openid profile',
+    scope: 'openid name email picture',
     responseType: 'token',
     defaultUserPasswordConnection: 'mdocs.io'
   });
